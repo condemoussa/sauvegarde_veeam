@@ -14,6 +14,7 @@
             'security/ir.model.access.csv',
              "views/veeam.xml",
              "wizard/wizard_veeam_views.xml",
+             "wizard/vider_table_veeam.xml",
              "views/menu.xml"
     ],
     'installable': True,

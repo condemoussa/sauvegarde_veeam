@@ -1,6 +1,7 @@
 "id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
 access_atm_veeam,atm.veeam,model_atm_veeam,,1,1,1,1
 access_wizard_veeam,wizard.veeam,model_wizard_veeam,,1,1,1,1
+access_vider_veeam,vider.veeam,model_vider_veeam,,1,1,1,1
 
 
 
