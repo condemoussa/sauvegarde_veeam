@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="wizard_form_veeam_v1">
+            <field name="name">GESTION VEEAM</field>
+            <field name="model">wizard.veeam</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Statistique CAN">
+                    <sheet>
+                        <group>
+                             <group>
+                                 <field name="mois" string="Mois"></field>
+                             </group>
+                            <group>
+                                 <field name="annee" string="Année"></field>
+                           </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_extraction_veeam" type="object" string="Extraire"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="wizard_action_veeam_v1">
+            <field name="name">GESTION VEEAM</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wizard.veeam</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="view_id" ref="wizard_form_veeam_v1"/>
+        </record>
+
+           <!-- Action pour générer le PDF -->
+
+        <record id="action_veeam_xlsx" model="ir.actions.report">
+            <field name="name">STATISTIQUE DE LA SAUVEGARDE</field>
+            <field name="model">wizard.veeam</field>
+            <field name="binding_model_id" ref="model_wizard_veeam"/>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">sauvegarde_veeam.statistique_veeam</field>
+            <field name="report_file">sauvegarde_veeam.statistique_veeam</field>
+            <field name="binding_view_types">list</field>
+              <field name="binding_type">report</field>
+        </record>
+
+
+
+    </data>
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+      <!-- menu general  -->
+      <menuitem name="SAUVEGARDE DE VEEAM" id="menu_atm_veeam_root"  />
+
+        <!-- *************************************************************** -->
+      <!-- menu gestion des centre d imputation -->
+
+      <menuitem
+                    name="Veeam" id="id_veeam"
+                    parent="menu_atm_veeam_root"
+                    action="action_atm_veeam"
+                    sequence="1"
+            />
+
+
+       <menuitem
+                    name="Rapport" id="id_rapport_veeam_extraction"
+                    parent="menu_atm_veeam_root"
+                    action="wizard_action_veeam_v1"
+                    sequence="2"
+            />
+
+
+
+  </data>
+</odoo>

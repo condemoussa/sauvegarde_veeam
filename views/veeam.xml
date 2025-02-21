@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_atm_veeam_tree" model="ir.ui.view">
+    <field name="name">atm.veeam.tree</field>
+    <field name="model">atm.veeam</field>
+    <field name="arch" type="xml">
+        <tree string="Machines Virtuelles" editable="top">
+            <field name="name"/>
+             <field name="nbre_machine"/>
+            <field name="statut"/>
+            <field name="dat_imp"/>
+            <field name="mois" string="Mois"/>
+            <field name="annee" string="Année"/>
+            <field name="ref"/>
+        </tree>
+    </field>
+    </record>
+
+    <record id="view_seach_veeam" model="ir.ui.view">
+                    <field name="name">atm.veeam</field>
+                    <field name="model">atm.veeam</field>
+                    <field name="arch" type="xml">
+                        <search string="Veeam">
+                              <group expand="0" string="Group By">
+                                <filter string="Nom sauvegarde" name="name" domain="[]" context="{'group_by': 'name'}"  />
+                            </group>
+                        </search>
+                    </field>
+     </record>
+
+
+    <record id="action_atm_veeam" model="ir.actions.act_window">
+    <field name="name">Machines Virtuelles</field>
+    <field name="res_model">atm.veeam</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+        <p>
+            Gérer les automatismes de vos machines virtuelles ici.
+        </p>
+    </field>
+</record>
+
+
+</odoo>
